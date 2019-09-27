@@ -1,0 +1,48 @@
+/**
+ * Created by PhpStorm.
+ * Script Name:
+ * Create: 2019/9/27 11:42
+ * Description:
+ * Author: Doogie<fdj@kuryun.cn>
+ */
+
+import Vue from 'vue'
+import Router from 'vue-router'
+//1、注册
+Vue.use(Router)
+//2、创建router对象
+const Home = () => import('views/home/Home')
+const Category = () => import('views/category/Category')
+const Cart = () => import('views/cart/Cart')
+const Profile = () => import('views/profile/Profile')
+
+const routes = [
+    {
+        path: '',
+        redirect: '/home'
+    },
+    {
+        path: '/home',
+        component: Home
+    },
+    {
+        path: '/category',
+        component: Category
+    },
+    {
+        path: '/cart',
+        component: Cart
+    },
+    {
+        path: '/profile',
+        component: Profile
+    }
+]
+
+const router = new Router({
+    routes,
+    mode: 'history'
+})
+
+//3、导出
+export default router
