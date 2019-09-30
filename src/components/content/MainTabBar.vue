@@ -23,13 +23,16 @@
 
     export default {
         name: 'MainTavBar',
-        computed: {
-            currentTab(){
-                return this.$route.path
+        data(){
+            return {
+                currentTab: '/home'
             }
         },
         components:{
             Tabbar, TabbarItem
+        },
+        created(){
+            if(this.$route.path !== '/')  this.currentTab = this.$route.path
         }
     }
 </script>
