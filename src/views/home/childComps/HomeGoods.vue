@@ -3,7 +3,7 @@
         <van-tabs v-model="activeName" sticky @change="changeTab" color="#1989fa">
             <van-tab title="推荐" name="recommend">
                 <van-row>
-                    <van-list class="goods-list" :offset="0"
+                    <van-list class="goods-list" :offset="300"
                               v-model="loading"
                               :finished="finished"
                               finished-text="没有更多了"
@@ -21,7 +21,7 @@
                 </van-row>
             </van-tab>
             <van-tab title="热卖" name="hot">
-                <van-list class="goods-list" :offset="0"
+                <van-list class="goods-list" :offset="300"
                           v-model="loading"
                           :finished="finished"
                           finished-text="没有更多了"
@@ -62,6 +62,9 @@
             }
         },
         methods: {
+            /**
+             * 事件监听相关的
+             */
             clickGoods(id){
                 console.log(id);
             },
@@ -75,7 +78,10 @@
                 this.list = []
                 this.getData()
             },
-            getData(){
+          /**
+           * 网络请求相关的
+           */
+          getData(){
                 listGoods({
                     type: this.activeName,
                     current_page: this.currentPage,
