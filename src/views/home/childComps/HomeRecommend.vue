@@ -28,9 +28,9 @@
     }
 </script>
 
-<style> /*去掉scoped后样式才能覆盖成功*/
+<style scoped> /*去掉scoped后样式才能覆盖成功*/
     /*覆盖样式统一为： 页面id 组件类名 元素  ，否则容易出现样式污染*/
-    #home .recommend .recommend-text{
+    .recommend .recommend-text{
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;

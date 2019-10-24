@@ -16,6 +16,24 @@ module.exports = {
                 'network': '@/network',
                 'views': '@/views',
             }
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.less$/,
+                    use: [
+                        {
+                            loader: 'less-loader',
+                            options: {
+                                modifyVars: {
+                                    // 直接覆盖vant里的变量
+                                    'tabs-line-height': '46px',
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     }
 }

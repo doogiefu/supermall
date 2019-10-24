@@ -92,11 +92,10 @@
     }
 </script>
 
-<style>
-    #home .home-goods .van-tabs--line .van-tabs__wrap{height: 46px;}
-    #home .home-goods .goods-list{margin-top: 20px;}
-    #home .home-goods .goods-item{padding: 0 10px;}
-    #home .home-goods .goods-text{
+<style scoped>
+    .home-goods .goods-list{margin-top: 20px;}
+    .home-goods .goods-item{padding: 0 10px;}
+    .home-goods .goods-text{
         font-size: 12px;
         color: #666;
         line-height: 15px;
@@ -106,5 +105,5 @@
         -webkit-line-clamp: 2;
         overflow: hidden;
     }
-    #home .van-tab--active{color: #1989fa}
+    .van-tab--active{color: #1989fa}
 </style>
